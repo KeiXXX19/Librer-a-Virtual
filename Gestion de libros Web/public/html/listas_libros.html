@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Libros | Biblioteca</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/screem.css" />
+    <link rel="stylesheet" href="../css/lista_libro.css" />
+  </head>
+  <body>
+    <header class="container-header">
+      <div class="container-div">
+        <div class="container-logo">
+          <a href="../html/pantalla_principal.html" title="Pantalla Principal">
+            <img src="../img/favicon.png" alt="Logo Principal" />
+            <span>Gestion de libros</span>
+          </a>
+        </div>
+        <div class="items-enlace">
+          <nav>
+            <div class="container-ul">
+              <ul>
+                <li>
+                  <a href="../html/pantalla_principal.html"
+                    ><i class="fa-solid fa-house"></i>Inicio</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/listas_libros.html"
+                    ><i class="fa-solid fa-rectangle-list"></i>Biblioteca</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/lectura_estadistica.html"
+                    ><i class="fa-solid fa-square-poll-vertical"></i
+                    >Estadisticas de lectura</a
+                  >
+                </li>
+                <li></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="container-login">
+          <ul>
+            <li>
+              <a href="../html/login.html" id="color_font"
+                ><i class="fa-solid fa-user-plus"></i>Crear Cuenta</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa-solid fa-arrow-right-from-bracket"
+                  title="Salir"
+                ></i
+                >Salir</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <section class="section-container-main">
+        <article class="article-container-main">
+          <div class="container-info">
+            <h2><i class="fa-solid fa-rectangle-list"></i>Mi Biblioteca</h2>
+          </div>
+          <div class="container-btnSearch">
+            <div class="container-select">
+              <label for="opciones">Filtrar:</label>
+              <select name="opciones" id="opciones">
+                <option value="opcion1">Novelas</option>
+                <option value="opcion2">Fabulas</option>
+                <option value="opcion3">Cuentos</option>
+                <option value="opcion3">Leyendas</option>
+                <option value="opcion3">Historias</option>
+              </select>
+            </div>
+            <div class="container-search" id="searh-container">
+              <input type="text" placeholder="Buscar libros..." />
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+          <div class="container-libro" id="libro-container">
+
+          </div>
+          <div class="box-libro-container" id = "sin-libros">
+            <div class="box-libro" id="cart-book">
+              <div class="empty-state">
+                <i class="fa-solid fa-book-open" id="i-empty"></i>
+                <p>No hay libros agregados</p>
+                <p>Agrega libros para comenzar a leer</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <aside class="aside-container">
+          <div class="container-aside-main">
+            <div class="info-aside-book">
+              <div class="info-book">
+                <h3>Total de libros</h3>
+                <p>Libros agregados: <span>0</span></p>
+              </div>
+              <div class="categ-book">
+                <h3>Categorias de los libros</h3>
+                <div class="items-check">
+                  <input type="checkbox" name="accion" id="accion" />
+                  <label for="accion">Accion</label>
+                </div>
+                <div class="items-check">
+                  <input type="checkbox" name="terror" id="terror" />
+                  <label for="terror">Terror</label>
+                </div>
+                <div class="items-check">
+                  <input type="checkbox" name="comedias" id="comedias" />
+                  <label for="comedias">Comedias</label>
+                </div>
+                <div class="items-check">
+                  <input type="checkbox" name="dramas" id="dramas" />
+                  <label for="dramas">Dramas</label>
+                </div>
+                <div class="items-check">
+                  <input type="checkbox" name="historias" id="historias" />
+                  <label for="historias">Historias Reales</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer-container">
+      <div class="container-foot">
+        <p>&copy; Derechos reservado por Francsico paez</p>
+        <ul>
+          <li><a href="../html/pantalla_principal.html">Inicio</a></li>
+          <li><a href="../html/lectura_estadistica.html">Estadisticas</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../js/pantalla_principal.js"></script>
+    <script src="../js/lista_libro.js"></script>
+  </body>
+</html>

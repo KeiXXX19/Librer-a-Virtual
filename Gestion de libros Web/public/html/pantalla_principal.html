@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/screem.css" />
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+    <title>Pantalla Principal | Mi lista de libros favoritos</title>
+  </head>
+  <body>
+    <header class="container-header">
+      <div class="container-div">
+        <div class="container-logo">
+          <button id="sidebar-toggle" class="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="../html/pantalla_principal.html" title="Pantalla Principal">
+            <img src="../img/favicon.png" alt="Logo Principal" />
+            <span>Gestion de libros</span>
+          </a>
+        </div>
+        <div class="items-enlace">
+          <nav>
+            <div class="container-ul">
+              <ul>
+                <li>
+                  <a href="../html/pantalla_principal.html"
+                    ><i class="fa-solid fa-house"></i>Inicio</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/listas_libros.html"
+                    ><i class="fa-solid fa-rectangle-list"></i>Biblioteca</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/lectura_estadistica.html"
+                    ><i class="fa-solid fa-square-poll-vertical"></i
+                    >Estadisticas de lectura</a
+                  >
+                </li>
+                <li></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container-search" id="searh-container">
+            <input type="text" placeholder="Buscar..." />
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+
+        <div class="container-login">
+          <ul>
+            <li>
+              <a href="../html/login.html" id="color_font"
+                ><i class="fa-solid fa-user-plus"></i>Crear Cuenta</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa-solid fa-arrow-right-from-bracket"
+                  title="Salir"
+                ></i
+                >Salir</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-main">
+      <!-- Sidebar existente (modificado) -->
+      <aside class="container-aside" id="sling-target">
+        <div class="container-sling">
+          <button class="close-sidebar">
+            <i class="fa-solid fa-times"></i>
+          </button>
+          <nav>
+            <ul>
+              <li>
+                <a href="../html/pantalla_principal.html"
+                  ><i class="fa-solid fa-house"></i> Inicio</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chart-bar"></i> Estadísticas</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-book"></i> Mis libros</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-user"></i> Mi cuenta</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <section class="container-section">
+        <article class="container-article-main">
+          <h2>
+            <i class="fa-solid fa-book-open-reader"></i>Catalogo de los libros
+          </h2>
+        </article>
+
+        <article class="container-article-secun">
+          <div class="container-button">
+            <div class="item-btn">
+              <button id="ad-book">
+                <i class="fa-solid fa-plus"></i>Agregar
+              </button>
+              <button><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+              <button><i class="fa-solid fa-minus"></i>Eliminar</button>
+            </div>
+
+            <dialog class="dialog-container" id="list_book">
+              <form
+                action="/agregar"
+                method="post"
+                enctype="multipart/form-data"
+                id="form-libro"
+              >
+                <div class="container-form">
+                  <h2>Agregar libro</h2>
+                  <p>
+                    Ahora colocará los datos necesarios para guardar y gestionar
+                    su libro
+                  </p>
+                </div>
+                <div class="itemsFile">
+                  <label for="archivoLibro">Archivo del libro:</label>
+                  <input
+                    type="file"
+                    id="archivoLibro"
+                    name="archivoLibro"
+                    required
+                  />
+                </div>
+                <div class="container-info-book">
+                  <div class="items">
+                    <fieldset>
+                      <legend>
+                        <label for="tituloLibro">Título del libro</label>
+                      </legend>
+                      <input
+                        type="text"
+                        id="tituloLibro"
+                        name="tituloLibro"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="items">
+                    <fieldset>
+                      <legend>
+                        <label for="autorLibro">Autor del libro</label>
+                      </legend>
+                      <input
+                        type="text"
+                        id="autorLibro"
+                        name="autorLibro"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="items">
+                    <fieldset>
+                      <legend>
+                        <label for="anoLibro">Año del libro</label>
+                      </legend>
+                      <input
+                        type="number"
+                        id="anoLibro"
+                        name="anoLibro"
+                        min="1000"
+                        max="2099"
+                        step="1"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="items">
+                    <fieldset>
+                      <legend>
+                        <label for="generoLibro">Genero del libro</label>
+                      </legend>
+                      <input
+                        type="text"
+                        id="generoLibro"
+                        name="generoLibro"
+                        min="1000"
+                        max="2099"
+                        step="1"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="items">
+                    <fieldset>
+                      <legend>
+                        <label for="descrip_libro">Descripción del libro</label>
+                      </legend>
+                      <textarea
+                        id="descrip_libro"
+                        name="descrip_libro"
+                        required
+                      ></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="items">
+                    <fieldset>
+                      <legend>
+                        <label for="nPagina">Número de páginas</label>
+                      </legend>
+                      <input
+                        type="number"
+                        id="nPagina"
+                        name="nPagina"
+                        min="1"
+                      />
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="container-button-form">
+                  <button type="submit" id="submit-add">
+                    <i class="fa-solid fa-square-plus"></i>Agregar
+                  </button>
+                  <button type="button" id="delete_book">
+                    <i class="fa-solid fa-rectangle-xmark"></i>Cancelar
+                  </button>
+                </div>
+              </form>
+            </dialog>
+          </div>
+
+          <div id="libro-container" class="container-libro">
+            <!-- Aquí se cargarán los libros -->
+          </div>
+
+          <div class="box-libro" id="cart-book">
+            <!-- aqui se mostrara los libros no agregados -->
+          </div>
+        </article>
+      </section>
+      <!-- <aside class="container-aside2" id="sling-target2">
+        <div class="container-sling2">
+          <nav>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Estadisticas</a></li>
+              <li><a href="#">Mis libros</a></li>
+              <li><a href="#">Mi cuenta</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside> -->
+    </main>
+<!-- 
+    <button id = "paintWindow">Print me</button> -->
+
+    <footer class="container-footer">
+      <p>&copy; Derechos reservado por Francisco paez</p>
+    </footer>
+
+    <script src="../js/pantalla_principal.js"></script>
+    <script src="../js/lista_libro.js"></script>
+  </body>
+</html>
+
+<!-- 
+<img src="../img/favicon.png" alt="Imagen" />
+              <div class="info">
+                <h2>titulo</h2>
+                <p>Autor: <span></span></p>
+                <p>Año : <span></span></p>
+                <p>descrpcion</p>
+                <p>Numero de paginas: <span>0</span></p>
+              </div>
+              <button id = "delete_book">Salir</button> -->

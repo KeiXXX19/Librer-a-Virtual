@@ -1,0 +1,18 @@
+@media (max-width: 700px) {
+
+    .container-header {
+        max-width: 100%;
+    }
+
+    .container-header .container-div .items-enlace {
+        transform: translateY(-20px);
+    }
+    .container-header .container-div .items-enlace  nav ul{
+        display: flex;
+        margin: 0 0 0 2rem;
+        overflow: hidden;
+        gap: 1rem;
+        overflow-anchor: auto;
+    }
+
+}

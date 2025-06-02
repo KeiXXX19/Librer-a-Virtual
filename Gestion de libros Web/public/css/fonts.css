@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'public_sans';
+    src: url(../font/Public_Sans/static/PublicSans-ExtraBoldItalic.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'public_sans1';
+    src: url(../font/Public_Sans/static/PublicSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'workSans';
+    src: url(../font/WorSans/WorkSans-Bold.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'workSans1';
+    src: url(../font/WorSans/WorkSans-ExtraBoldItalic.ttf);
+    font-weight: 700;
+}
