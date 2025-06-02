@@ -54,7 +54,7 @@ Plataforma web para explorar, gestionar y disfrutar de libros digitales desde cu
 Aquí puedes ver algunas capturas de pantalla de la aplicación en funcionamiento:
 
 ![Página Principal de la Aplicación de Tareas](screenshots/main_page.png)
-![añadir libro](screenshots/create_task.png)
+![añadir libro]([screenshots/create_task.png](https://github.com/KeiXXX19/Librer-a-Virtual/blob/7aab50b3e7a88371b99f51caf8c39f581fa4e7b8/Agregar%20Libro.jpg))
 
 
 
@@ -63,9 +63,3 @@ Autores
 Clan Gojo
 
 
-
-## Autor
-
-* *CLAN-GOJO*
-
----
